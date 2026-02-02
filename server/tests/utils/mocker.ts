@@ -9,11 +9,6 @@ import { BaseApi } from "../../src/core/abstracts/api/base-api.abstract";
 import type { BaseClient } from "../../src/core/abstracts/client/base-client.abstract";
 import type { ApiRateLimiter } from "../../src/core/abstracts/ratelimiter/rate-limiter.abstract";
 import { BanchoClient } from "../../src/core/domains";
-import { OsulabsClient } from "../../src/core/domains/beatmaps.download/osulabs.client";
-import type {
-  OsulabsBeatmap,
-  OsulabsBeatmapset,
-} from "../../src/core/domains/beatmaps.download/osulabs-client.types";
 import { MinoClient } from "../../src/core/domains/catboy.best/mino.client";
 import type {
   MinoBeatmap,
@@ -200,15 +195,6 @@ export class Mocker {
           generateBeatmapset: (
             options?: DeepPartial<MinoBeatmapset>,
           ) => FakerGenerator.generateMinoBeatmapset(options),
-          generateArrayBuffer: () => new ArrayBuffer(1024),
-        };
-      case OsulabsClient:
-        return {
-          generateBeatmap: (options?: DeepPartial<OsulabsBeatmap>) =>
-            FakerGenerator.generateOsulabsBeatmap(options),
-          generateBeatmapset: (
-            options?: DeepPartial<OsulabsBeatmapset>,
-          ) => FakerGenerator.generateOsulabsBeatmapset(options),
           generateArrayBuffer: () => new ArrayBuffer(1024),
         };
       default:

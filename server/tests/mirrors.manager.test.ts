@@ -16,7 +16,6 @@ import config from "../src/config";
 import type { BaseClient } from "../src/core/abstracts/client/base-client.abstract";
 import { ClientAbilities } from "../src/core/abstracts/client/base-client.types";
 import { DirectClient } from "../src/core/domains";
-import { OsulabsClient } from "../src/core/domains/beatmaps.download/osulabs.client";
 import { MinoClient } from "../src/core/domains/catboy.best/mino.client";
 import { GatariClient } from "../src/core/domains/gatari.pw/gatari.client";
 import { NerinyanClient } from "../src/core/domains/nerinyan.moe/nerinyan.client";
@@ -30,7 +29,6 @@ const mirrors: Array<new (...args: any[]) => BaseClient> = [
   BanchoClient,
   GatariClient,
   NerinyanClient,
-  OsulabsClient,
   DirectClient,
 ];
 

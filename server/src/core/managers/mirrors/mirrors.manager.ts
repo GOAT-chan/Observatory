@@ -23,7 +23,6 @@ import {
   ClientAbilities,
 } from "../../abstracts/client/base-client.types";
 import { BanchoClient, DirectClient } from "../../domains";
-import { OsulabsClient } from "../../domains/beatmaps.download/osulabs.client";
 import { MinoClient } from "../../domains/catboy.best/mino.client";
 import { GatariClient } from "../../domains/gatari.pw/gatari.client";
 import { NerinyanClient } from "../../domains/nerinyan.moe/nerinyan.client";
@@ -63,15 +62,6 @@ export class MirrorsManager {
 
       this.clients.push({
         client: minoClient,
-        ...DEFAULT_CLIENT_PROPS,
-      });
-    }
-
-    if (!config.MirrorsToIgnore.includes("osulabs")) {
-      const osulabsClient = new OsulabsClient(storageManager);
-
-      this.clients.push({
-        client: osulabsClient,
         ...DEFAULT_CLIENT_PROPS,
       });
     }
