@@ -262,7 +262,7 @@ export class ApiRateLimiter {
                 `Got axios error while making request to ${route}. Setting cooldown of 5 minutes`,
                 "warn",
       );
-      this.setOnCooldownForDuration(5 * 60 * 1000); // 5 minutes
+      this.setOnCooldownForDuration(2 * 60 * 1000); // 2 minutes
     }
 
     if (response?.status === 429) {
@@ -283,18 +283,18 @@ export class ApiRateLimiter {
 
     if (response?.status && response.status >= 502) {
       this.log(
-                `Server error (${response.status}) for ${route}. Setting cooldown of 5 minutes`,
+                `Server error (${response.status}) for ${route}. Setting cooldown of 2 minutes`,
                 "warn",
       );
-      this.setOnCooldownForDuration(5 * 60 * 1000); // 5 minutes
+      this.setOnCooldownForDuration(2 * 60 * 1000); // 2 minutes
     }
 
     if (!response) {
       this.log(
-                `No response received for ${route}. Setting cooldown of 5 minutes`,
+                `No response received for ${route}. Setting cooldown of 2 minutes`,
                 "warn",
       );
-      this.setOnCooldownForDuration(5 * 60 * 1000); // 5 minutes
+      this.setOnCooldownForDuration(2 * 60 * 1000); // 2 minutes
     }
   }
 
