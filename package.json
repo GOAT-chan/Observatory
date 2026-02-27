@@ -42,7 +42,7 @@
     "pino-pretty": "^11.3.0",
     "postgres": "^3.4.8",
     "qs": "^6.15.0",
-    "rosu-pp-js": "git+https://github.com/GOAT-chan/rosu-pp-js"
+    "rosu-pp-js": "file:./deps/rosu_pp_js_nodejs.tar.gz"
   },
   "devDependencies": {
     "@richardscull/eslint-config": "^1.0.6",

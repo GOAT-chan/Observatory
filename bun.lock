@@ -26,7 +26,7 @@
         "pino-pretty": "^11.3.0",
         "postgres": "^3.4.8",
         "qs": "^6.15.0",
-        "rosu-pp-js": "git+https://github.com/GOAT-chan/rosu-pp-js",
+        "rosu-pp-js": "file:./deps/rosu_pp_js_nodejs.tar.gz",
       },
       "devDependencies": {
         "@richardscull/eslint-config": "^1.0.6",
@@ -897,7 +897,7 @@
 
     "rfdc": ["rfdc@1.4.1", "", {}, "sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA=="],
 
-    "rosu-pp-js": ["rosu-pp-js@github:GOAT-chan/rosu-pp-js#976c907", {}, "GOAT-chan-rosu-pp-js-976c907", "sha512-VBXVa9Uv0eWQaFpop2iWbUYoWi8kH+X7ysWps4G8aDaU79cUYg4StsD7s7pGxJLAIfimXFfuIO9Cf7XyFQYCbQ=="],
+    "rosu-pp-js": ["rosu-pp-js@./deps/rosu_pp_js_nodejs.tar.gz", {}, "sha512-/z7ZoSb8qd9en0TPvTUZBz/RMidr5wy5f6p3BxKJhLxPjLD8hTBe49KUueBoyPSMSHWd6MZ8c9eEFCXvO+dTMw=="],
 
     "run-parallel": ["run-parallel@1.2.0", "", { "dependencies": { "queue-microtask": "^1.2.2" } }, "sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA=="],
 
